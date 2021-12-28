@@ -1,0 +1,110 @@
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    background-color: #2E1E0F;
+    align-items: center;
+}
+
+.plays img {
+    width: 23px;
+    height: auto;
+}
+
+.plays .rock {
+    width: 20px;
+    height: auto;
+}
+
+.interative img:hover {
+    opacity: 0.3;
+}
+
+.interative img {
+    width: 115px;
+    height: auto;
+}
+
+.interative .rock {
+    width: 100px;
+    height: auto;
+}
+
+h1 a {
+    text-decoration: none;
+    color: #D36135;
+    font-size: 60px;
+}
+
+.game {
+    display: flex;
+    box-sizing: border-box;
+    min-width: 800px;
+    gap: 0%;
+    padding: 0px 50px 0px 50px;
+}
+
+.information {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #E8F1F2;
+    border-radius: 10px;
+    padding: 10px;
+    color: #355691;
+    align-items: stretch;
+    justify-content: center;
+    padding-top: 0px;
+    min-width: 150px;
+}
+
+.information .computer, .information .player {
+    flex: 1 0 auto;
+}
+
+hr {
+    margin: 10px 0px 10px 0px;
+    border: 1px dashed #E8F1F2;
+}
+
+.interative {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.interative .computer, .interative .player {
+    border: 2px solid #E8F1F2;
+    border-radius: 10px;
+    min-width: 500px;
+    min-height: 200px;
+}
+
+.interative span {
+    margin: 25px 0px;
+    color: #355691;
+    font-size: 25px;
+}
+
+.interative .computer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.interative .player {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.plays {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 150px;
+}

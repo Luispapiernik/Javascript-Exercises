@@ -1,0 +1,33 @@
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    min-height: 100%;
+    background-color: #2E1E0F;
+    justify-content: center;
+    align-items: center;
+}
+
+.presentation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.presentation .title {
+    color: #D36135;
+    font-size: 60px;
+}
+
+.presentation .start {
+    color: #355691;
+    font-size: 30px;
+}
