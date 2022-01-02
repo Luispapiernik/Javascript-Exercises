@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/p5.js"></script>
+    <script src="js/script.js"></script>
+    <title>Game Of life</title>
+</head>
+<body>
+    <div id="left">
+        <h1 class="title">
+            Game Of Life
+        </h1>
+        <div class="configurations">
+            <div id="color-selection">
+                <div id="front-color">
+                </div>
+                <div id="background-color">
+                </div>
+            </div>
+            <button id="eraser">Eraser</button>
+            <button id="pencil">Pen</button>
+            <button id="grid">Toggle Grid</button>
+            <button id="clear">Clear Canvas</button>
+            <div id="slider">
+                <input type="range" min="1" max="100" value="50" class="slider" id="my-range">
+                <span id="size">4 x 4</span>
+            </div>
+        </div>
+    </div>
+    <!-- here goes the canvas -->
+    <div id="right">
+    </div>
+</body>
+</html>
