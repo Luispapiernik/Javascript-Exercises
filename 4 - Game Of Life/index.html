@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/p5.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
     <title>Game Of life</title>
 </head>
 <body>
@@ -17,10 +17,8 @@
         </h1>
         <div class="configurations">
             <div id="color-selection">
-                <div id="front-color">
-                </div>
-                <div id="background-color">
-                </div>
+                <input id="front-color" type="color" value="#000000"/>
+                <input id="background-color" type="color" value="#ffffff"/>
             </div>
             <button id="eraser">Eraser</button>
             <button id="pencil">Pen</button>
