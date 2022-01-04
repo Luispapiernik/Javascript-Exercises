@@ -3,28 +3,40 @@ let backgroundColor = "white";
 let drawColor = "black";
 let withGrid = false;
 let gridSize = 4;
+let game = new GameOfLife(gridSize, gridSize);
 
-let backgroundColorPicker = document.getElementById("background-color");
-backgroundColorPicker.addEventListener(
-    "change", (event) => {backgroundColor = event.target.value;}
-);
 
-let drawColorPicker = document.getElementById("front-color");
-drawColorPicker.addEventListener(
-    "change", (event) => {drawColor = event.target.value;}
-);
+function updateGame () {
 
-let gridButton = document.getElementById("grid");
-gridButton.addEventListener(
-    "click", () => {withGrid = !withGrid;}
-);
+}
 
-let sliderInput = document.querySelector("#slider input");
-let sliderSpan = document.querySelector("#slider span");
-sliderInput.addEventListener(
-    "change", (event) => {
-        sliderSpan.textContent = `${event.target.value} x ${event.target.value}`;
-});
+
+function showMatrix () {
+    let widthPerCell = Math.floor(width / gridSize);
+    let heightPerCell = Math.floor(height / gridSize);
+
+    let table = game.getTable();
+    for (let i = 0; i < gridSize; i++) {
+        for (let j = 0; j < gridSize; j++) {
+            if (table[i][j] === 1){
+                fill(drawColor)
+                rect(i * widthPerCell, j * heightPerCell, widthPerCell, heightPerCell);
+            }
+        }
+    }
+}
+
+function showMouse () {
+    let widthPerCell = Math.floor(width / gridSize);
+    let heightPerCell = Math.floor(height / gridSize);
+
+    let i = Math.floor(mouseX / widthPerCell);
+    let j = Math.floor(mouseY / heightPerCell);
+
+    fill(drawColor)
+    rect(i * widthPerCell, j * heightPerCell, widthPerCell, heightPerCell);
+}
+
 
 function resizeLogic () {
     resizeCanvas(
@@ -48,7 +60,10 @@ function setup () {
     canvas.parent("right");
 }
 
+
 function draw () {
     // In case of a window size change
     resizeLogic();
+    showMatrix();
+    showMouse();
 }
